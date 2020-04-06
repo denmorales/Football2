@@ -26,6 +26,7 @@ namespace Football2
             this.context = new FootballContext();
             this.context.Teams.Load();
             this.teamBindingSource.DataSource = this.context.Teams.Local.ToBindingList();
+            Team[] teams = this.context.Teams.Local.ToArray();
         }
         protected override void OnClosing(CancelEventArgs e)
         {
